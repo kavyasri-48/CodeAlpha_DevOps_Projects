@@ -88,6 +88,20 @@ docker start docker-web-server
 docker rm docker-web-server
 ```
 
+## Screenshots
+
+### Docker Webpage
+
+The custom webpage running inside the Docker container:
+
+![Docker Webpage](screenshots/docker-webpage.png)
+
+### Docker Commands
+
+Docker image build, container execution, and container status:
+
+![Docker Commands](screenshots/docker-commands.png)
+
 ## Result
 
 Successfully deployed and accessed a custom web page through an Nginx web server running inside a Docker container.
