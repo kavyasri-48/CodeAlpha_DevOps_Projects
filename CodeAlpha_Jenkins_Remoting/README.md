@@ -44,7 +44,29 @@ Linux Agent (linux-agent)
 
 ## Jenkins Controller
 
-The Jenkins Controller is responsible for managing jobs, scheduling builds, and assigning work to connected agents.
+## Screenshots
+
+### Jenkins Linux Agent
+
+![Jenkins Linux Agent](screenshots/Jenkins%20Linux%20agent.png)
+
+### Jenkins Remote Agent
+
+![Jenkins Remote Agent 1](screenshots/Jenkins%20remote%20agent%201.png)
+
+![Jenkins Remote Agent 2](screenshots/Jenkins%20remote%20agent%202.png)
+
+### Jenkins Console Output
+
+![Jenkins Console Output 1](screenshots/Jenkins%20console%20output%201.png)
+
+![Jenkins Console Output 2](screenshots/Jenkins%20console%20output%202.png)
+
+![Jenkins Console Output 3](screenshots/Jenkins%20console%20output%203.png)
+
+### Jenkins Log
+
+![Jenkins Log](screenshots/Jenkins%20Log.png)The Jenkins Controller is responsible for managing jobs, scheduling builds, and assigning work to connected agents.
 
 ## Jenkins Agent
 
@@ -57,6 +79,30 @@ The agent was configured with **two executors**, allowing it to execute multiple
 Jenkins Remoting enables communication between the Jenkins Controller and remote agents.
 
 The Controller uses this communication to send build tasks to the Linux Agent, while the Agent executes those tasks and reports the results back to the Controller.
+
+## Screenshots
+
+### Jenkins Linux Agent
+
+![Jenkins Linux Agent](screenshots/Jenkins%20Linux%20agent.png)
+
+### Jenkins Remote Agent
+
+![Jenkins Remote Agent 1](screenshots/Jenkins%20remote%20agent%201.png)
+
+![Jenkins Remote Agent 2](screenshots/Jenkins%20remote%20agent%202.png)
+
+### Jenkins Console Output
+
+![Jenkins Console Output 1](screenshots/Jenkins%20console%20output%201.png)
+
+![Jenkins Console Output 2](screenshots/Jenkins%20console%20output%202.png)
+
+![Jenkins Console Output 3](screenshots/Jenkins%20console%20output%203.png)
+
+### Jenkins Log
+
+![Jenkins Log](screenshots/Jenkins%20Log.png)
 
 ## Result
 
