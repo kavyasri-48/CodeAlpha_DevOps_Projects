@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-A simple web server deployed inside a Docker container using Nginx.
+This project demonstrates how to deploy a custom web page inside a **Docker container using the Nginx web server**.
 
-The project demonstrates how to create a Docker image, run an Nginx web server inside a Docker container, map the container port to the host machine, and serve a custom HTML/CSS webpage.
+A Docker image is created using an Nginx base image, the custom HTML/CSS webpage is copied into the Nginx web directory, and the application is exposed through port mapping.
 
 ## Architecture
 
@@ -19,41 +19,49 @@ Docker Container
 Nginx Web Server
       |
       v
-index.html
+Custom HTML/CSS Webpage
 ```
 
 ## Technologies Used
 
-* Linux / Ubuntu
 * Docker
 * Nginx
+* Linux / Ubuntu
 * HTML
 * CSS
 * Git
 * GitHub
 
-## Docker Concepts Practiced
+## Implementation
 
-* Docker images
-* Docker containers
-* Dockerfile
-* Docker build
-* Docker run
-* Port mapping
-* Container lifecycle
-* Container logs
-* Container monitoring
-* Troubleshooting
+1. Created a custom HTML/CSS webpage.
+2. Created a `Dockerfile` using the official Nginx image.
+3. Copied the webpage into the Nginx web directory.
+4. Built the Docker image.
+5. Created and started a Docker container.
+6. Configured port mapping from the host to the Nginx container.
+7. Verified the running container using Docker commands.
+8. Accessed the webpage through the browser.
 
 ## Dockerfile
 
-The Dockerfile uses the official Nginx image as the base image and copies the custom HTML webpage into the Nginx web directory.
+The Dockerfile uses the official **Nginx image** as the base image and copies the custom webpage into the Nginx web root directory.
 
-## Build the Image
+Example:
+
+```dockerfile
+FROM nginx:latest
+
+COPY index.html /usr/share/nginx/html/index.html
+```
+
+## Build the Docker Image
 
 ```bash
 docker build -t docker-web-server .
 ```
+
+This command creates a Docker image named `docker-web-server`.
 
 ## Run the Container
 
@@ -61,11 +69,19 @@ docker build -t docker-web-server .
 docker run -d -p 8081:80 --name docker-web-server docker-web-server
 ```
 
+Here:
+
+* `-d` runs the container in detached mode.
+* `-p 8081:80` maps host port `8081` to container port `80`.
+* `--name docker-web-server` assigns a name to the container.
+
 ## Check the Running Container
 
 ```bash
 docker ps
 ```
+
+This command displays the running Docker containers and their port mappings.
 
 ## Access the Web Server
 
@@ -75,7 +91,7 @@ Open the following URL in a browser:
 http://localhost:8081
 ```
 
-The custom webpage is served by Nginx from inside the Docker container.
+The custom HTML/CSS webpage is served by Nginx from inside the Docker container.
 
 ## Useful Docker Commands
 
@@ -92,32 +108,38 @@ docker rm docker-web-server
 
 ### Docker Webpage
 
-The custom webpage running inside the Docker container:
-
 ![Docker Webpage](screenshots/docker-webpage.png)
 
 ### Docker Commands
-
-Docker image build, container execution, and container status:
 
 ![Docker Commands](screenshots/docker-commands.png)
 
 ## Result
 
-Successfully deployed and accessed a custom web page through an Nginx web server running inside a Docker container.
+Successfully deployed and accessed a custom HTML/CSS webpage through an **Nginx web server running inside a Docker container**.
 
 ## Key DevOps Concepts
 
 * Containerization
-* Docker image creation
-* Container management
-* Nginx web server
+* Docker images
+* Docker containers
+* Dockerfile
+* Docker build
+* Docker run
 * Port mapping
+* Nginx web server
+* Container lifecycle
 * Linux command-line operations
 * Basic troubleshooting
 * Git and GitHub
 
+## Learning Outcome
+
+This project provided hands-on experience with **Docker containerization, Nginx web servers, Docker image creation, container management, port mapping, and Linux command-line operations**.
+
 ## Internship Project
 
-**CodeAlpha — Docker Web Server Project**
+**CodeAlpha — DevOps Internship**
+
+**Project:** Docker Web Server
 
